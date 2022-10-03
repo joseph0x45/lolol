@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face{
+    font-family: titleText;
+    src: url('/cf.ttf');
+}
+
+.title {
+    font-family: titleText;
+}

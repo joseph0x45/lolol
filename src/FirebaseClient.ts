@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"
+import { getFirestore, where, query, collection, getDocs, addDoc, doc } from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZGHmiHfViAzjxNuwC5czg06qIsghPDaM",
@@ -13,8 +13,23 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
+const usersRef = collection(db, "users")
 
 export {
-    app,
-    db 
+    login
+}
+
+const login = async (username: string)=>{
+  if(username.includes("nigga") || username.includes("nigger") ){
+    return [false, "Thou name contains a word that has been banned from LOLAND"]
+  }
+  const q = query(usersRef, where("username", "==", username))
+  const queryResults = await getDocs(q)
+  if(queryResults.size!=0){
+    return [false, "A Lolander already goes by that name. Mind choosing another one"]
+  }
+  const newUser = await addDoc(collection(db, "users"), {
+    username: username
+  })
+  return [true, username]
 }

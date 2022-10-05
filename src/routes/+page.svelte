@@ -1,17 +1,22 @@
 <script>
-	import { redirect } from '@sveltejs/kit';
 	import { onMount } from 'svelte';
-	import { db, app } from '../FirebaseClient';
-
-	let loggedIn;
+	import Header from '../components/Header.svelte';
+	import PostForm from '../components/PostForm.svelte';
 
 	onMount(() => {
 		if (window != undefined) {
-			window.location.href = '/login'
+			if (!localStorage.getItem('lolanderid')) {
+				window.location.href = '/login';
+			}
 		}
 	});
 </script>
 
-<div class=" flex justify-center bg-green-500 p-6 font-extrabold text-7xl title">
-	<h1>Welcome to LOLAND</h1>
+<svelte:head>
+	<script src="https://kit.fontawesome.com/2a7b093a26.js" crossorigin="anonymous"></script>
+</svelte:head>
+
+<div class="w-full">
+	<Header />
+	<PostForm />
 </div>

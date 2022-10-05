@@ -7,6 +7,6 @@
     src: url('/cf.ttf');
 }
 
-.title {
+body {
     font-family: titleText;
 }

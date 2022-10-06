@@ -1,7 +1,7 @@
 <script lang="ts" >
     import { login } from "../../FirebaseClient"
 
-    let errorMessage: String 
+    let errorMessage: string 
     $: rErrorMessage = errorMessage
 
     let username = ""

@@ -1,12 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, where, query, collection, getDocs, addDoc, doc } from "firebase/firestore"
-import cloudinary from "cloudinary"
 
-cloudinary.v2.config({ 
-  cloud_name: 'dbeaywnzl', 
-  api_key: '711397439553298', 
-  api_secret: 'HO8IzH2ZoNLy7VfBfeyxYDHNrlw' 
-});
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZGHmiHfViAzjxNuwC5czg06qIsghPDaM",

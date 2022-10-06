@@ -5,6 +5,7 @@
 	import PostsFeed from '../components/PostsFeed.svelte';
 
 	onMount(() => {
+		alert("Mounting")
 		if (window != undefined) {
 			console.log("Ain't working");
 			if (!localStorage.getItem('lolanderid')) {

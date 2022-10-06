@@ -6,7 +6,9 @@
 
 	onMount(() => {
 		if (window != undefined) {
+			console.log("Ain't working");
 			if (!localStorage.getItem('lolanderid')) {
+				console.log("Ain't working");
 				window.location.href = '/login';
 			}
 		}

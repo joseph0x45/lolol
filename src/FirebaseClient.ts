@@ -23,8 +23,7 @@ const db = getFirestore(app)
 const usersRef = collection(db, "users")
 
 export {
-    login,
-    post
+    login
 }
 
 const login = async (username: string)=>{
@@ -40,8 +39,4 @@ const login = async (username: string)=>{
     username: username
   })
   return [true, username]
-}
-
-const post = async () => {
-  
 }

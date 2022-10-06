@@ -12,6 +12,7 @@
 		reader.onload = (e) => {
 			avatar = e.target?.result;
 		};
+		console.log(avatar);
 	};
 </script>
 

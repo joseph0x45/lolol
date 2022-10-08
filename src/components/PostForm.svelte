@@ -1,22 +1,14 @@
 <script lang="ts">
-	// @ts-nocheck
 
 	import Attachment from 'carbon-icons-svelte/lib/Attachment.svelte';
 
-	let avatar, fileinput;
+	let avatar, fileinput: HTMLInputElement;
+	
 
-	const onFileSelected = (e) => {
-		let image = e.target.files[0];
-		let reader = new FileReader();
-		reader.readAsDataURL(image);
-		reader.onload = (e) => {
-			avatar = e.target?.result;
-		};
-		console.log(avatar);
-	};
+
 </script>
 
-<div class="sticky bottom-0 w-full flex items-center px-1 h-12 bg-slate-200">
+<div class="fixed bottom-0 w-full flex items-center px-1 h-12 bg-slate-200">
 	<!-- text field -->
 	<input
 		type="text"
@@ -35,13 +27,13 @@
 			id="file"
 			name="file"
 			class="hidden"
-			on:change={(e) => onFileSelected(e)}
 			bind:this={fileinput}
 		/>
 	</label>
 
 	<!-- send icon (paper plane) -->
 	<button
+	    on:click="{()=>{console.log(fileinput.value)}}"
 		type="submit"
 		class="rounded-xl h-[36px] ml-2 pl-[10px]  w-[48px] bg-green-700 text-green-100 border border-green-700 hover:bg-green-100 hover:text-green-600 transition-all"
 	>

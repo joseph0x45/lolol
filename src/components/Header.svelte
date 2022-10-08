@@ -16,7 +16,7 @@
 
     <!-- profile here -->
     <div class="m-2 flex items-center rounded-full text-green-900 hover:bg-green-600 hover:text-green-200  transition-all">
-        <img alt="" src="/img/red-face2.png" class="ml-2 rounded-full w-[40px] h-[40px] ring-2 ring-green-800 hover:ring-2 hover:ring-green-300 hover:scale-105 transition-all"/>
+        <img alt="" src="/img/red-face2.png" class="ml-2 rounded-full w-[40px] h-[40px] ring-2 ring-green-800 hover:ring-2 hover:ring-green-300 hover:scale-105 hover:cursor-pointer transition-all"/>
         <p class="pl-4 pr-4 text-[25px]">{username}</p>
     </div>
 

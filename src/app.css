@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.media_preview {
+    @apply max-h-[300px] border border-slate-300 rounded-xl hover:cursor-pointer hover:border-green-600 hover:scale-95 m-2 transition-all ;
+}
+
+
 @font-face{
     font-family: titleText;
     src: url('/cf.ttf');
@@ -10,3 +16,4 @@
 body {
     font-family: titleText;
 }
+

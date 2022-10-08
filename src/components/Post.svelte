@@ -2,6 +2,7 @@
 	export let text: string;
 	export let op: string;
 	export let media: string | undefined;
+    export let lols: number;
 </script>
 
 <div class="w-[680px] relative bg-white mb-2 rounded-xl m-auto border border-slate-300">
@@ -16,7 +17,16 @@
 	</div>
 
 	<!-- post content -->
-	<h1 class="p-[10px] text-slate-700">{text}</h1>
+	<p 
+    class={` 
+        ${ media ? 
+            "p-[10px] text-slate-700 break-words" : 
+            "p-[10px] pb-[50px] text-slate-700 break-words" 
+        } 
+    `}
+    >
+        {text}
+    </p>
 
 	<!-- post pic -->
 	{#if media}
@@ -28,9 +38,15 @@
 	{/if}
 
 	<!-- LOL btn -->
+	<!-- class={`hover:cursor-pointer absolute bottom-0 right-0 p-2 opacity-25 hover:opacity-100 text-[25px] text-slate-500 hover:text-green-100 hover:scale-105 ${media?"media":"pt-4 "} `} -->
 	<div
-		class="hover:cursor-pointer absolute bottom-0 right-0 p-2 opacity-25 hover:opacity-100 text-[35px] text-slate-500 hover:text-green-100 hover:scale-105"
+        class={` 
+            ${ media ? 
+                "absolute hover:cursor-pointer bottom-0 right-0 p-2 opacity-75 hover:opacity-100 text-[25px] text-slate-100 hover:text-green-300 hover:scale-105 rounded-br-xl transition-all" : 
+                "absolute hover:cursor-pointer bottom-0 right-0 p-2 text-[25px] text-slate-200 hover:text-slate-500 hover:scale-105 rounded-br-xl transition-all" 
+            } 
+        `}
 	>
-		LOL
+	    {lols} LOL
 	</div>
 </div>

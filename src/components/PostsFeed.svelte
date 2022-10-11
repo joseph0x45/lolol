@@ -34,10 +34,10 @@
 >
 	<!-- center div -->
 	<!-- posts are rendered here -->
-	<div class=" m-auto bg-white w-[700px] pt-2 pb-[130px] border-l-2 border-r-2 border-slate-200">
+	<div class=" m-auto bg-white w-[390px] md:w-[700px] pt-2 pb-[130px] border-l-2 border-r-2 border-slate-200">
 			{#each feed as post}
 				<Post
-					op={post.op}
+					op={ post.op==localStorage.getItem("lolanderid")? "You" : post.op }
 					media={post.media ? post.media : undefined}
 					lols={post.lols}
 					text={post.text}

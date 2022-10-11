@@ -2,6 +2,7 @@
 	import { browser } from '$app/environment';
 	import { SubtractAlt } from 'carbon-icons-svelte';
 	import Attachment from 'carbon-icons-svelte/lib/Attachment.svelte';
+	import SendAlt from 'carbon-icons-svelte/lib/SendAlt.svelte';
 	import { post } from "../FirebaseClient"
 	let mediaArray: HTMLInputElement | null
 	let preview : HTMLElement
@@ -66,6 +67,7 @@
 		>
 			<Attachment size={24} class="pl-1" />
 			<input
+				accept="image/png, image/gif, image/jpeg"
 				type="file"
 				id="media"
 				name="file"
@@ -83,6 +85,7 @@
 			type="submit"
 			class="rounded-xl h-[36px] ml-2 pl-[10px]  w-[48px] bg-green-700 text-green-100 border border-green-700 hover:bg-green-100 hover:text-green-600 transition-all"
 		>
+			<!-- <SendAlt size={24} /> -->
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"

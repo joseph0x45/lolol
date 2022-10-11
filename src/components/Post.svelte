@@ -5,7 +5,7 @@
     export let lols: number;
 </script>
 
-<div class="w-[680px] relative bg-white mb-2 rounded-xl m-auto border border-slate-300">
+<div class="w-[370px] md:w-[680px] relative bg-white mx-2 mb-2 rounded-xl m-auto border border-slate-300">
 	<!-- user id and pic -->
 	<div class="pl-[10px] pt-[10px] flex items-center transition-all">
 		<img
@@ -33,7 +33,7 @@
 		<img
 			alt=""
 			src={media}
-			class="rounded-b-xl border-t border-slate-300 w-[680px]  transition-all"
+			class="rounded-b-xl border-t border-slate-300 w-[370px] md:w-[680px] transition-all"
 		/>
 	{/if}
 
